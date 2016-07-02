@@ -15,10 +15,10 @@ public class BinderService extends Service {
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
-        return remoteBinder;
+        return mRemoteBinder;
     }
 
-    private BinderPool.RemoteBinder remoteBinder = new BinderPool.RemoteBinder();
+    private BinderPool.RemoteBinder mRemoteBinder = new BinderPool.RemoteBinder();
 
     @Override
     public void onDestroy() {

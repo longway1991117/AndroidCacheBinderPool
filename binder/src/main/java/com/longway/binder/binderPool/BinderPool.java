@@ -43,12 +43,9 @@ public class BinderPool {
 
     private Context convertContext(Context context) {
         if (context == null) {
-            throw new NullPointerException("context must be not null");
+            throw new NullPointerException("context==null");
         }
-        if (context instanceof Activity) {
-            return context.getApplicationContext();
-        }
-        if (context instanceof Service) {
+        if (!(context instanceof Application)) {
             return context.getApplicationContext();
         }
         return context;
