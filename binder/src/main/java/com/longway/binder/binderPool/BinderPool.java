@@ -1,7 +1,6 @@
 package com.longway.binder.binderPool;
 
-import android.app.Activity;
-import android.app.Service;
+import android.app.Application;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
